@@ -1,0 +1,21 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+products:
+    path: /
+    controller: App\Controller\ProductController::index
+
+register:
+    path: /
+    controller: App\Controller\RegistrationController::index
+
+cart:
+    path: /
+    controller: App\Controller\PanierController::index
+
+

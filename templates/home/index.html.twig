@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blue Bird{% endblock %}
+
+{% block body %}
+<!-- Hero -->
+    <div class="hero">
+        <div class="hero-text">
+            <h1 class="lg">Achetez chez Blue Bird</h1>
+            <p>Vous ne manquerez jamais de rien</p>
+            <a href="{{ path('app_product_index') }}" class=" sm btn btn-outline">Consulter nos produits</a>
+        </div>
+    </div>
+    <!-- Categories -->
+    <section>
+        <div class="container">
+            <h1 class="md text-center my-2">Nos catégories</h1>
+            <div class="grid grid-3 text-center my-4">
+            {% for category in categories %}
+                <div class="category-card">
+                    <a class="md" href="{{ path('app_product_index') }}?category_id={{category.id}}">
+                        <img src="/images/{{category.image}}" />
+                        <div>
+                            {{category.name}}
+                        </div>
+                    </a>
+                </div>
+                
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
